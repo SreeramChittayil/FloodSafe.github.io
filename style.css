@@ -1,0 +1,58 @@
+:root {
+  --bg:#0a0f1a;
+  --fg:#e6f2ff;
+  --brand:#33c3ff;
+  --accent:#00e1a2;
+}
+
+body {
+  margin:0;
+  padding:0;
+  font-family:Inter, sans-serif;
+  background:var(--bg);
+  color:var(--fg);
+  line-height:1.6;
+}
+
+h1,h2 {margin:0 0 16px}
+.lead {color:#cfd8e3; font-size:18px}
+
+.nav {
+  position:sticky; top:0; background:#0a0f1acc;
+  padding:12px 20px; z-index:100;
+}
+.nav-wrap {display:flex; align-items:center; justify-content:space-between}
+.brand {display:flex; align-items:center; gap:10px; font-weight:800}
+.logo {height:36px}
+
+.btn {
+  padding:10px 18px;
+  border-radius:8px;
+  text-decoration:none;
+  margin:0 4px;
+}
+.btn.primary {background:var(--brand); color:#01131f; font-weight:600}
+.btn.ghost {color:var(--fg); border:1px solid rgba(255,255,255,.2)}
+
+.hero {position:relative; padding:80px 20px}
+.grid {display:grid; grid-template-columns:1fr 1fr; gap:30px; align-items:center}
+.hero-image img {border-radius:12px; width:100%; height:auto}
+
+.split {display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; margin:80px 0}
+.split img {border-radius:12px; width:100%; height:auto}
+
+.center {text-align:center; padding:80px 20px}
+
+footer {padding:30px 20px; text-align:center; background:#111827}
+footer .logo.small {height:28px; margin-bottom:8px}
+
+/* Waves */
+.waves {position:absolute; bottom:0; left:0; right:0; height:200px; pointer-events:none}
+.wave {position:absolute; bottom:0; left:0; right:0; height:100px; background-repeat:repeat-x; opacity:.4}
+.wave--1 {background:var(--brand); animation:drift 15s linear infinite}
+.wave--2 {background:var(--accent); animation:drift 25s linear infinite reverse; opacity:.3}
+.wave--3 {background:#0077ff; animation:drift 35s linear infinite; opacity:.2}
+@keyframes drift {0%{background-position-x:0}100%{background-position-x:-2000px}}
+
+/* Rain container */
+.rain {position:absolute; top:0; left:0; right:0; bottom:0; pointer-events:none}
